@@ -5,5 +5,5 @@
     "examples": ["show me the latest xkcd", "random xkcd"],
     "categories": ["Media"],
     "creator_name": "Alvin Charles",
-    "creator_url": "https://github.com/avncharlie"
+    "creator_url": "https://github.com/avncharlie/flashlight-xkcd"
 }
