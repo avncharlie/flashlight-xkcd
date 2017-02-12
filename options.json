@@ -1,0 +1,28 @@
+{
+    "options": [
+        {
+            "text": "View:",
+            "type": "dropdown",
+            "key": "view",
+            "options": [
+                {"text": "Minimalistic", "value": "minimalistic"},
+                {"text": "xkcd mobile site", "value": "mobile"}
+            ]
+        },
+        {
+            "type": "checkmark",
+            "text": "Show alt text",
+            "key": "alt_text"
+        },
+        {
+            "type": "hint",
+            "text": "Alt text is only available in the minimalistic view."
+        },
+        {
+            "type": "buttons",
+            "buttons": [
+                {"text": "See the Github repo", "url": "https://github.com/avncharlie/flashlight-xkcd"}
+            ]
+        }
+    ]
+}

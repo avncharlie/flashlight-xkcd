@@ -2,7 +2,7 @@
     "name": "xkcd", 
     "displayName": "xkcd comics",
     "description": "Shows a random xkcd comic",
-    "examples": ["show me the latest xkcd", "random xkcd", "latest xkcd comic", "show me an xkcd"], 
+    "examples": ["show me the latest xkcd", "random xkcd"],
     "categories": ["Media"],
     "creator_name": "Alvin Charles",
     "creator_url": "https://github.com/avncharlie"
