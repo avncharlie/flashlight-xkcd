@@ -15,6 +15,5 @@ Also can display alt text, or view in xkcd's mobile view.
 
 ![ScreenShot](https://github.com/avncharlie/flashlight-xkcd/raw/master/Mobile%20view%20screenshot.png)
 
-To install, first install [Flashlight](http://flashlight.nateparrott.com/), then install 'xkcd comics' from the Media section.
-
-Or manually install by first installing Flashlight, and then `git clone https://github.com/avncharlie/flashlight-xkcd.git ~/Library/FlashlightPlugins/xkcd.bundle`
+See the [original repository](https://github.com/avncharlie/flashlight-xkcd)
+for any questions about this plugin.
