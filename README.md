@@ -13,9 +13,7 @@ See the [original repository](https://github.com/avncharlie/flashlight-xkcd)
 for any questions about this plugin.
 
 ![ScreenShot](https://raw.githubusercontent.com/avncharlie/flashlight-xkcd/master/Screenshot.png)
-
 ![ScreenShot](https://github.com/avncharlie/flashlight-xkcd/raw/master/Settings%20screenshot.png)
-
 ![ScreenShot](https://github.com/avncharlie/flashlight-xkcd/raw/master/Mobile%20view%20screenshot.png)
 
 
