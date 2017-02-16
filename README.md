@@ -2,8 +2,11 @@
 Shows the latest or a random xkcd comic
 
 Comics can be shown through many ways:
+
 `show me the latest xkcd
+
 random xkcd
+
 show xkcd 123` 
 
 ![ScreenShot](https://raw.githubusercontent.com/avncharlie/flashlight-xkcd/master/Screenshot.png)
