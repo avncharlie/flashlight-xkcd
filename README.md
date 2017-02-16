@@ -1,7 +1,7 @@
 # xkcd Plugin for [Flashlight](http://flashlight.nateparrott.com/)
 Shows the latest or a random xkcd comic
 
-Comics can be shown through many ways:
+Comics can be shown through many ways, including:
 
     show me the latest xkcd
     random xkcd
