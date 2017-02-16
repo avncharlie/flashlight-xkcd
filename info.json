@@ -1,8 +1,8 @@
 {
     "name": "xkcd", 
     "displayName": "xkcd comics",
-    "description": "Shows a random xkcd comic",
-    "examples": ["show me the latest xkcd", "random xkcd"],
+    "description": "Shows either the latest, random or a specific xkcd comic",
+    "examples": ["show me the latest xkcd", "random xkcd", "xkcd 123"],
     "categories": ["Media"],
     "creator_name": "Alvin Charles",
     "creator_url": "https://github.com/avncharlie/flashlight-xkcd"

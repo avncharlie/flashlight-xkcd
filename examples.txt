@@ -1,2 +1,4 @@
 show me ~text(the latest) xkcd
+show me xkcd ~text(1123)
 ~text(random) xkcd
+xkcd ~text(234)

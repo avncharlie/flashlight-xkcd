@@ -11,7 +11,7 @@ import datetime
 import random
 import os
 
-def xkcdImageRetriever(random_comic=False):
+def xkcdImageRetriever(random_comic=False, comic_number=False):
     '''Return requested info through xkcd's JSON interface'''
     info_cache = 'xkcd'+datetime.datetime.now().strftime("%Y.%m.%d")+'.json'
     info_address = 'https://xkcd.com/info.0.json'
@@ -19,10 +19,13 @@ def xkcdImageRetriever(random_comic=False):
     cache_cleanup(info_cache)
 
     # If there is a cached json, read from it. Otherwise make get the json 
-    # and make the cache. Caches is made once a day.
-    if info_cache in ''.join(os.listdir('.')):
+    # and make the cache. Caches is made once a day. Only do this if a
+    # specific comic hasn't requested.
+    if comic_number:
+        info = json.loads(urllib2.urlopen('https://xkcd.com/' \
+            + str(comic_number) + '/info.0.json').read())
+    elif info_cache in ''.join(os.listdir('.')):
         info = json.load(open(info_cache, 'r'))
-
     else:
         xkcd_json = urllib2.urlopen(info_address).read()
         info = json.loads(xkcd_json)
@@ -49,11 +52,22 @@ def results(fields, original_query):
     text = fields['~text']
     settings = json.load(open('preferences.json'))
     random_comic = False
+    comic_num = False
 
     if 'latest' in original_query.lower():
         title = 'latest xkcd'
         info = xkcdImageRetriever()
         run_args = 'http://xkcd.com'
+
+    elif any(char.isdigit() for char in original_query.lower()):
+        comic_num = 0
+        for word in original_query.lower().split():
+            if word.isdigit():
+                comic_num = int(word)
+                break
+        title = 'xkcd comic no ' + str(comic_num)
+        info = xkcdImageRetriever(comic_number=comic_num)
+        run_args = 'http://xkcd.com/' + str(info['num']) + '/'
 
     else:
         title = 'random xkcd'
@@ -61,7 +75,7 @@ def results(fields, original_query):
         info = xkcdImageRetriever(random_comic=random_comic)
         run_args = 'http://xkcd.com/' + str(info['num']) + '/'
 
-    html = gen_html(info, settings, random_comic)
+    html = gen_html(info, settings, random_comic, comic_num=comic_num)
 
     return {
         "title": title,
@@ -70,7 +84,7 @@ def results(fields, original_query):
         "webview_transparent_background": True
     }
 
-def gen_html(info, settings, random):
+def gen_html(info, settings, random, comic_num=False):
     '''Based on given information and settings, return generated html'''
     if settings['view'] == 'minimalistic':
         comic_info = 'Comic number ' + str(info['num']) + ': ' \
@@ -94,6 +108,8 @@ def gen_html(info, settings, random):
         link = 'http://m.xkcd.com'
         if random:
             link += '/' + str(info['num']) + '/'
+        elif comic_num:
+            link += '/' + str(comic_num) + '/'
 
         html = '''
         <script>
