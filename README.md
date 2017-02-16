@@ -3,11 +3,11 @@ Shows the latest or a random xkcd comic
 
 Comics can be shown through many ways:
 
-`show me the latest xkcd
+    show me the latest xkcd
+    random xkcd
+    show xkcd 123
 
-random xkcd
-
-show xkcd 123` 
+Also can display alt text, or view in xkcd's mobile view.
 
 ![ScreenShot](https://raw.githubusercontent.com/avncharlie/flashlight-xkcd/master/Screenshot.png)
 
