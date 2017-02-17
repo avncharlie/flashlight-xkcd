@@ -9,8 +9,7 @@ Comics can be shown through many ways, including:
 
 Also can display alt text, or view in xkcd's mobile view.
 
-See the [original repository](https://github.com/avncharlie/flashlight-xkcd)
-for any questions about this plugin.
+See the [original repository](https://github.com/avncharlie/flashlight-xkcd) for any questions about this plugin.
 
 ![ScreenShot](https://raw.githubusercontent.com/avncharlie/flashlight-xkcd/master/Screenshot.png)
 ![ScreenShot](https://github.com/avncharlie/flashlight-xkcd/raw/master/Settings%20screenshot.png)
